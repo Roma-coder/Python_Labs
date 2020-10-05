@@ -1,0 +1,5 @@
+w1 = input("Enter string")
+w2 = input("Enter first word")
+w3 = input("Enter secound word")
+w4 = w1.replace(w2,w3)
+print(w4)
