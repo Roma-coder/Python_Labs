@@ -5,12 +5,12 @@ from club import Club
 #клуб який має найбільше трофеїв
 
 
-country = input('country')
+country = input('country: ')
 
 FILENAME = "clubs"
 
-with shelve.open(FILENAME) as states:
-    clubs_by_country = list(filter(lambda s: s.country.lower() == country.lower(), states))
+with shelve.open(FILENAME) as clubs:
+    clubs_by_country = list(filter(lambda s: s.country.lower() == country.lower(), clubs.values()))
 
     if len(clubs_by_country) == 0 :
         print("No clubs with such country")
