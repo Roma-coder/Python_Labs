@@ -1,27 +1,31 @@
+# -*- coding: cp1251 -*-
 import cgi
 
 form = cgi.FieldStorage()
+
+
 num1 = int(form.getfirst('num1'))
 num2 = int(form.getfirst('num2'))
 num3 = int(form.getfirst('num3'))
-e = 0
-result = max(num1, num2)/min(num1, num2)
+
+
+e = False
 
 if num1 + num2 > num3:
     if num1 + num3 > num2:
         if num2 + num3 > num1:
-            e = 1
+            e = True
 
-if e == 1:
+if e == True:
     print('Content-type: text/html\n')
     print("""<!DOCTYPE HTML>
         <html>
         <head>
             <meta charset="UTF-8">
-            <title>Варіант 8</title>
+            <title>Варіант 11</title>
             <link rel="stylesheet" href="./../bootstrap.min.css">
         </head>
         <body>""")
 
-    print('<h1  align="center">Результат: {}</h1>'.format("True"))
+    print(f'<h1 align="center">Результат:  {e}</h1>')
     print('</body></html>')
