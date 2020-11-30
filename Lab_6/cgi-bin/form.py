@@ -16,16 +16,16 @@ if num1 + num2 > num3:
         if num2 + num3 > num1:
             e = True
 
-if e == True:
-    print('Content-type: text/html\n')
-    print("""<!DOCTYPE HTML>
-        <html>
-        <head>
-            <meta charset="UTF-8">
-            <title>Варіант 11</title>
-            <link rel="stylesheet" href="./../bootstrap.min.css">
-        </head>
-        <body>""")
+c = "Правильно" if e else "Неправильно"
+print('Content-type: text/html\n')
+print("""<!DOCTYPE HTML>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Варіант 11</title>
+        <link rel="stylesheet" href="./../bootstrap.min.css">
+    </head>
+    <body>""")
 
-    print(f'<h1 align="center">Результат:  {e}</h1>')
-    print('</body></html>')
+print(f'<h1 align="center">Результат:  {c}</h1>')
+print('</body></html>')
