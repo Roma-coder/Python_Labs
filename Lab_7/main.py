@@ -8,13 +8,13 @@ class Block:
         self.radioValue = IntVar() 
         self.radioValue.set(0)
 
-        self.lab1 = Label(master, width=20, text=' Перше число:', pady=10)
+        self.lab1 = Label(master, width=20, text='Перша сторона:', pady=10)
         self.ent1 = Entry(master, width=20)
 
-        self.lab2 = Label(master, width=20, text='Друге число:', pady=10)
+        self.lab2 = Label(master, width=20, text='Друга сторона:', pady=10)
         self.ent2 = Entry(master, width=20)
 
-        self.lab3 = Label(master, width=20, text='Третэ число:', pady=10)
+        self.lab3 = Label(master, width=20, text='Третя сторона:', pady=10)
         self.ent3 = Entry(master, width=20)
 
         self.r1but = Radiobutton(master, width=20, text='Периметр:', pady=10, variable=self.radioValue, value=0)
